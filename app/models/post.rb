@@ -14,7 +14,7 @@ class Post < ActiveRecord::Base
         # does not duplicate categories for a post
         if !self.categories.include?(category)
           self.categories << category
-#        end
+        end
       end
     end
   end
