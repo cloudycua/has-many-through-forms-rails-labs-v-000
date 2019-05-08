@@ -12,7 +12,7 @@ class Post < ActiveRecord::Base
       if category_attributes[:name].present?
         category = Category.find_or_create_by(category_attribute)
         # does not duplicate categories for a post
-#        if !self.categories.include?(category)
+        if !self.categories.include?(category)
           self.categories << category
 #        end
       end
