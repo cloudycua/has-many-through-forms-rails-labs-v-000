@@ -22,8 +22,8 @@
       <%= b.check_box %>
       <%= b.label :class => "whatever" %>
     </p>
-  <% end %>  
-  
+  <% end %>
+
   <br><br>
   <%= f.label "Or, create a new category" %>
   <%= f.fields_for :categories, @post.categories.build do |categories_fields| %>
@@ -33,6 +33,6 @@
   <br><br>
   <%= f.submit %>
 
-<% end %>  
-          
+<% end %>
+
  
