@@ -9,7 +9,7 @@ class Post < ActiveRecord::Base
   def categories_attributes=(category_attributes)
     category_attributes.values.each do |category_attribute|
       # only creates category if it has a name
-      if category_attributes[][:name].present?
+      if category_attributes[:name].present?
         category = Category.find_or_create_by(category_attribute)
         # does not duplicate categories for a post
 #        if !self.categories.include?(category)
