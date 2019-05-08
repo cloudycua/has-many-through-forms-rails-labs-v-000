@@ -15,3 +15,10 @@
     <li><%= c.content %></li>
   <% end %>
 </ul>
+
+<h3>Users</h3>
+<ul>
+  <%= @post.users.unique.each do |c| %>
+    <li><%= c.name %></li>
+  <% end %>
+</ul>
