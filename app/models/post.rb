@@ -6,7 +6,6 @@ class Post < ActiveRecord::Base
 
   # accepts_nested_attributes_for :categories
   # do not use because of all the custom rules in writer below
-
   def categories_attributes=(category_attributes)
     category_attributes.values.each do |category_attribute|
       # only creates category if it has a name
