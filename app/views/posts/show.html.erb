@@ -18,7 +18,7 @@
 
 <h3>Users</h3>
 <ul>
-  <%= @post.users.unique.each do |u| %>
+  <%= @post.users.uniq.each do |u| %>
     <li><%= link_to u.name, u %></li>
   <% end %>
 </ul>
