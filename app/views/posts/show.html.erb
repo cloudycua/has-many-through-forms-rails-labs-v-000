@@ -27,3 +27,7 @@
 <%= form_for @post.comments.build do |f| %>
   <p><%= f.text_area :content, :placeholder => "add you comment here" %></p>
   <%= f.collection_select :user_id, User.all, :id, :username, include_blank: 'Choose a user' %>
+  <%= f.hidden_field :post_id %>
+  <%= f.fields_for :user, @post.comments.last.build_user do |user_fields| %>
+  <%= user_fields.text_field :username, :placeholder => "Add a New User" %>
+<% end %>
