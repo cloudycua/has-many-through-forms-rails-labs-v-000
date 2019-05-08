@@ -12,7 +12,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    raise self.category_attributes[:name]
+    raise params[category_attributes][:name]
     post = Post.create(post_params)
     redirect_to post
   end
